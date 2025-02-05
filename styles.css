@@ -1,0 +1,158 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Full-screen container */
+.container {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background: #20c997;
+    text-align: center;
+    padding: 40px;
+    font-size: 1.5rem;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex: 1; /* Takes up remaining height */
+    padding: 30px;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sidebar, .content {
+    flex: 1;
+    padding: 20px;
+}
+
+
+.sidebar-image {
+    background: #ccc;
+    margin-top: 10px;
+}
+
+
+.content-image {
+    background: #aaa;
+    margin-top: 10px;
+}
+
+.img-gojo {
+    width: 300px;
+    height: 20px;
+    background-image: url(../gojo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content {
+    float: left;
+    border: black 2px solid;
+    width: 786px;
+    height: 470;
+    margin-top: 20px;
+    margin-left: -1px;
+    background-size: cover;
+    background-color: white;
+}
+#toji{
+    padding-left: 110px;
+    font-size: 30px;
+    color: black;
+}
+#fight {
+    width: 420px;
+    height: 350px;    
+}
+
+
+
+/* Desktop Image Size */
+@media (min-width: 1025px) {
+    .img-gojo {
+        height: 680px;
+        width: 700px; 
+    }
+    .video-toji {
+        height: 680px;
+        width: 1100px;
+    }
+}
+
+/* Tablet Image Size */
+@media (max-width: 1024px) {
+    .img-gojo {
+        height: 300px;
+        width: 180px;
+    }
+    .video-toji {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+/* Mobile Image Size */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav a {
+        padding: 10px;
+        font-size: 1rem;
+    }
+    .img-gojo {
+        height: 150px;
+        width: 100%;
+    }
+    .video-toji {
+        height: 200px;
+        width: 100%;
+    }
+}
